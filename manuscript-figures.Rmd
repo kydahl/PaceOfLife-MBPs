@@ -67,11 +67,11 @@ AllOutputs_df <- rbind(read_rds("results/AllOutputs_low.rds"),
   filter(Family == family)
 ```
 
-```{r Fig_1_Flow_Diagram, out.width='100%', fig.align='center'}
+```{r Fig_1_Flow_Diagram, out.width='100%', fig.align='center', fig.cap = 'Flow diagram for our compartmental model of mosquito-borne parasite transmission. Black arrows denote transitions of individuals between states while red dotted arrows indicate the influence of one compartment on new infections in another. In this model, $S$ denotes susceptible individuals of either hosts ($H$) or vectors ($V$), $I$ denotes infectious individuals, and $R$ denotes recovered (and immune) individuals.'}
 knitr::include_graphics("results/flow_diagram.png")
 ```
-
-```{r Fig_S3_Mosquito_TPCs,  out.width='100%', fig.height=9, fig.width=12, fig.align='center'}
+\newpage
+```{r Fig_S3_Mosquito_TPCs,  out.width='100%', fig.height=9, fig.width=12, fig.align='center', fig.cap = 'Thermal performance curves (TPCs) for the mosquito and parasite traits used in our model. Curves are shown in color for each of the five systems used to parameterize the model. Temperatures vary from 10C to 35C to encompass the full thermal niche of all mosquito species considered in this study (defined as the range of temperatures at which all traits for a given species are positive). Each trait is a unimodal function of temperature except for the lifespan of \textit{Culex quinquefasciatus} (d). Recruitment rate (a) is derived from a sub-model of immature mosquito population dynamics described in the Mathematical Supplement. The \textit{Aedes aegypti} and DENV and \textit{Ae. aegypti} and ZIKV recruitment rate (a) and maximum biting frequency (b) curves overlap because infection is assumed to not affect these traits (but see Tesla et al. (2018)).All functions and parameters for generating these curves are derived from Mordecai et al. (2019,2017, 2013); Shocket et al. (2020); Tesla et al. (2018); Villena et al. (2022).'}
 # Extract mosquito species, temperature, and parameters from the full table
 
 # Read in vector trait data
@@ -161,8 +161,8 @@ MosqThermTraits_plot <- MosqThermTraits_df %>%
 
 shift_legend(MosqThermTraits_plot)
 ```
-
-```{r Fig_2_Trait_Fits, message=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center'}
+\newpage
+```{r Fig_2_Trait_Fits, message=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center', fig.cap = 'Fits of vertebrate host life history parameters to the pace of life measure (black lines) for (A) primates and (B) rodents with points indicating trait values from the underlying data set in blue and orange, respectively. Note that the y-axis is displayed on a $\\log_{10}$-scale. Inset shows the $R^2$ for the linear model $\\log(z) \\sim$ Pace of life for each trait, $z$. The results shown here use generation time, the ratio of $\\log(2)$ and the intrinsic population growth rate, to measure pace of life. The results for all other pace of life measures are given in the Supplementary Materials.'}
 
 FitsTable <- read.csv("data/clean/fits-table.csv")
 
@@ -248,8 +248,8 @@ rodent_plot = FitsTable %>%
 plot_grid(primate_plot, rodent_plot, nrow = 2)
 
 ```
-
-```{r Fig_S1_Primate_Trait_Fits, message=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center'}
+\newpage
+```{r Fig_S1_Primate_Trait_Fits, message=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center', fig.cap = 'Fits of vertebrate host life history parameters to each candidate pace of life measure for primates. Blue points indicate values taken from the trait data set. Note that the y-axis is displayed on a $\\log_{10}$-scale. Inset shows the $R^2$ for the linear model $\\log(z) \\sim$ Pace of life for each trait, $z$. Generation time (E.) was chosen as it best approximated the covariation among the life history traits. The full definition of each candidate is given in the mathematical supplement.'}
 
 FitsTable <- read.csv("data/clean/fits-table.csv")
 
@@ -313,8 +313,8 @@ fitplot <- FitsTable %>%
 
 fitplot
 ```
-
-```{r Fig_S2_Rodent_Trait_Fits, message=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center'}
+\newpage
+```{r Fig_S2_Rodent_Trait_Fits, message=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center', fig.cap = 'Fits of vertebrate host life history parameters to each candidate pace of life measure for rodents. Orange points indicate values taken from the trait data set. Note that the y-axis is displayed on a $\\log_{10}$-scale. Inset shows the $R^2$ for the linear model $\\log(z) \\sim$ Pace of life for each trait, $z$. Generation time (E.) was chosen as it best approximated the covariation among the life history traits. The full definition of each candidate is given in the mathematical supplement.'}
 
 fitplot <- FitsTable %>%
   filter(Family == "rodent") %>%
@@ -361,8 +361,8 @@ fitplot <- FitsTable %>%
 
 fitplot
 ```
-
-```{r Fig_S4_lambdaR0_B, message=FALSE, out.width='100%', fig.width=10, fig.height=6, fig.align='top'}
+\newpage
+```{r Fig_S4_lambdaR0_B, message=FALSE, out.width='100%', fig.width=10, fig.height=6, fig.align='top',fig.cap = 'Representative curves showing the relationship between $\\lambda_{\\mathcal{R}_0}$ (equation (1) in the main text) and the blood meal demand-supply ratio, $B$. The pace of life hypothesis suggests that the curve should always lie above zero (implying that transmission potential always increases with the pace of life history of the host). $c_K$ is the logarithmic derivative of vertebrate host population density with respect to pace of life history while $r$ is a relative measure of the variation with respect to pace of life history of immune traits (infection duration and susceptibility) compared to mortality rate. When $c_K$ is negative, the curve slopes downwards and, if $r$ is also sufficiently large, $\\lambda_{\\mathcal{R}_0}$ is always positive (otherwise it undergoes a sign change). On the other hand, when $c_K$ is positive, the curve slopes upwards and a sufficiently large r value is necessary for $\\lambda_{\\mathcal{R}_0}$ to be positive.'}
 # Put together a figure that helps the reader interpret the relationship between lambda_R0 and B
 # Function to evaluate equation (2) in the main text
 
@@ -480,8 +480,8 @@ inequality_plot
 # critB_table_for_manuscript
 
 ```
-
-```{r Fig_3_lambdaR0_Ranges, message = FALSE, warning=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center'}
+\newpage
+```{r Fig_3_lambdaR0_Ranges, message = FALSE, warning=FALSE, out.width='100%', fig.width=6.5, fig.height=3.65625, fig.align='center', fig.cap = 'Ranges of $\\lambda_{\\mathcal{R}_0}$ (see equation (2)) across the entire fast-slow life history continuum for each pathogen type and mosquito species as temperature is varied. Transmission potential increases with pace of life when $\\lambda_{\\mathcal{R}_0}$ is positive. The horizontal axis distinguishes groupings of parasite type and mosquito species; it does not represent a variable.'}
 
 lambdaR0_ranges <- AllOutputs_df %>%
   filter(Immune_variation == "High") %>% 
@@ -655,8 +655,8 @@ Mosquito_label_table$Mosquito_label <- factor(Mosquito_label_table$Mosquito_labe
   "Aedes aegypti", "Aedes albopictus", "Anopheles gambiae", "Culex quinquefasciatus"
 ))
 ```
-
-```{r Figs_S56_Full_lambdaR0_ranges, message = FALSE, warning=FALSE, fig.width=6.5, fig.height=6, fig.align='center'} 
+\newpage
+```{r Figs_S56_Full_lambdaR0_ranges, message = FALSE, warning=FALSE, fig.width=6.5, fig.height=6, fig.align='center', fig.cap='Ranges of values of $\\lambda_{\\mathcal{R}_0}$ for primates (or rodents). The line type indicates the strength of the relationship between immunological traits (susceptibility and infection duration) and pace of life The solid lines indicate a wide range of immune trait variation, the dashed lines a narrow range, and the dotted lines no variation. The other levels of variation are described in more detail in Table 1 of the main text. '} 
 
 # You will have to specify the family (rodent or primate) on Line 60 to get the appropriate plot, since the full data set is too large to load in all at once
 
