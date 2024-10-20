@@ -1,0 +1,31 @@
+Immune_variation,system_ID,sigmaH,critVHratio
+Low,Anopheles gambiae / Plasmodium falciparum,10,8.098627556625079
+Low,Anopheles gambiae / Plasmodium falciparum,100,80.9862755662508
+Low,Anopheles gambiae / Plasmodium falciparum,Inf,Inf
+Low,Aedes aegypti / DENV,10,10.060965147507716
+Low,Aedes aegypti / DENV,100,100.60965147507716
+Low,Aedes aegypti / DENV,Inf,Inf
+Low,Aedes albopictus / DENV,10,9.963364514483828
+Low,Aedes albopictus / DENV,100,99.6336451448383
+Low,Aedes albopictus / DENV,Inf,Inf
+Low,Aedes aegypti / ZIKV,10,10.060965147507716
+Low,Aedes aegypti / ZIKV,100,100.60965147507716
+Low,Aedes aegypti / ZIKV,Inf,Inf
+Low,Culex quinquefasciatus / WNV,10,10.918692086282421
+Low,Culex quinquefasciatus / WNV,100,109.18692086282422
+Low,Culex quinquefasciatus / WNV,Inf,Inf
+High,Anopheles gambiae / Plasmodium falciparum,10,0.6835116540841721
+High,Anopheles gambiae / Plasmodium falciparum,100,6.835116540841721
+High,Anopheles gambiae / Plasmodium falciparum,Inf,Inf
+High,Aedes aegypti / DENV,10,0.8491299151089683
+High,Aedes aegypti / DENV,100,8.491299151089683
+High,Aedes aegypti / DENV,Inf,Inf
+High,Aedes albopictus / DENV,10,0.84089257246648
+High,Aedes albopictus / DENV,100,8.4089257246648
+High,Aedes albopictus / DENV,Inf,Inf
+High,Aedes aegypti / ZIKV,10,0.8491299151089683
+High,Aedes aegypti / ZIKV,100,8.491299151089683
+High,Aedes aegypti / ZIKV,Inf,Inf
+High,Culex quinquefasciatus / WNV,10,0.9215207436259383
+High,Culex quinquefasciatus / WNV,100,9.215207436259382
+High,Culex quinquefasciatus / WNV,Inf,Inf
